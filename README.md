@@ -1,86 +1,100 @@
-# GRODT8.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRODT - Get Rich or Die Trying</title>
+    <title>GRODT - Webshop</title>
     <style>
-        * {
+        body {
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body, html {
-            height: 100%;
             font-family: Arial, sans-serif;
-            overflow: hidden;
+            background: #f7f7f7;
+            color: #333;
         }
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
         }
-        .video-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+        .hero {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            height: 300px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
-            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        .overlay h1 {
+        .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
         }
-        .overlay p {
-            font-size: 1.5rem;
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
         }
-        .enter-site {
-            margin-top: 2rem;
-            padding: 0.75rem 2rem;
-            font-size: 1rem;
-            color: black;
+        .product {
             background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h2 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+        .product p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .product button {
+            background: #333;
+            color: white;
             border: none;
+            padding: 0.75rem 1.5rem;
             border-radius: 25px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
         }
-        .enter-site:hover {
-            background: #ddd;
+        .product button:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="https://cdn.pixabay.com/vimeo/848921033/Grey%20City%20Streetwear%20Fashion%20Ad.mp4?width=1920&hash=123" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="overlay">
-            <h1>GRODT</h1>
-            <p>Get Rich or Die Trying</p>
-            <button class="enter-site" onclick="enterSite()">Enter Site</button>
-        </div>
+    <header>
+        <h1>GRODT - Get Rich or Die Trying</h1>
+    </header>
+    <div class="hero">
+        <h1>Welkom bij onze webshop</h1>
     </div>
-
-    <script>
-        function enterSite() {
-            window.location.href = "shop.html";
-        }
-    </script>
+    <section class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>&euro;49.99</p>
+            <button>Koop nu</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>&euro;59.99</p>
+            <button>Koop nu</button>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>&euro;69.99</p>
+            <button>Koop nu</button>
+        </div>
+    </section>
 </body>
 </html>
